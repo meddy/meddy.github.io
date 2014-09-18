@@ -1,0 +1,19 @@
+{
+  "name": "medddy.github.io",
+  "version": "0.1.0",
+  "authors": [
+    "Max Eddy <maxiscool@gmail.com>"
+  ],
+  "license": " MIT",
+  "homepage": "meddy.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
