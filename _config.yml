@@ -1,0 +1,10 @@
+# Site settings
+title: Max Eddy Dot Net
+email: maxiscool@gmail.com
+description: Max Eddy is a Web Developer who works near Burlington, Vermont.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://maxeddy.net"
+github_username:  meddy
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,25 @@
+<footer class="footer">
+  <div class="row">
+    <p class="col-md-6">&copy; Max Eddy</p>
+    <div class="col-md-6 text-right">
+      <a href="https://github.com/meddy" class="btn btn-info">
+        <i class="fa fa-github-square fa-2x"></i>
+      </a>
+      <a href="http://stackoverflow.com/users/1881082/maxiscool" class="btn btn-info">
+        <i class="fa fa-stack-overflow fa-2x"></i>
+      </a>
+      <a href="https://www.linkedin.com/pub/max-eddy/51/b86/968" class="btn btn-info">
+        <i class="fa fa-linkedin-square fa-2x"></i>
+      </a>
+      <a href="https://www.facebook.com/maxtallica" class="btn btn-info">
+        <i class="fa fa-facebook-square fa-2x"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+window.onload = function() {
+  document.querySelector('footer p')
+      .innerHTML = '&copy; Max Eddy ' + new Date().getFullYear();
+};
+</script>
