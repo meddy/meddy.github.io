@@ -1,4 +1,4 @@
 meddy.github.io
 ===============
-
-Max Eddy's Website
+The master branch holds the *built* version of the site.
+Other branches will include the source development files.
