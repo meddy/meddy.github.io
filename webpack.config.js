@@ -9,7 +9,8 @@ module.exports = {
     main: './main.js'
   },
   output: {
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].[contenthash].js'
   },
   module: {
     rules: [
@@ -22,10 +23,10 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[path][name].[ext]'
+          name: '[name].[ext]'
         }
       }
     ]
