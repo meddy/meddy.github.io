@@ -5,32 +5,40 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: [
-    path.join(__dirname, 'main.scss')
-  ],
+  entry: {
+    main: './main.js'
+  },
   output: {
     path: path.join(__dirname, 'dist')
   },
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [
-        MiniCssExtractPlugin.loader,
-        'css-loader',
-        'sass-loader'
-      ]
-    }]
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      }
+    ]
   },
   plugins: [
-    new CleanWebpackPlugin(
-      path.join(__dirname, 'dist')
-    ),
+    new CleanWebpackPlugin('./dist'),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     }),
     new OptimizeCssAssetsPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'index.html')
+      template: './index.html',
+      favicon: './favicon.ico'
     })
   ]
 };
